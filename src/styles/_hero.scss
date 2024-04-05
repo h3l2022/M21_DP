@@ -6,9 +6,27 @@
     background-image: url(../images/hero_desktop.jpeg);
     text-align: center;
     background-size: cover;
-   
+
+    @media (max-width: 768px) {
+        background-image: url(../images/hero_celular.jpeg);
+        padding-top: calc(50vw + 25px);
+        background-size: contain;
+        background-repeat: no-repeat;
+        margin-top: -55px;
+        
+        img {
+            max-width: 48px;
+        }
+    }
+ 
     img {
-        max-width: 300px;
+        max-width: 250px;
+    }
+
+   
+    .button {
+        margin-top: 2vw;
+        margin-bottom: 8px;
     }
 
 
@@ -20,6 +38,11 @@
     &_branding {
         max-width: 320px;
         margin: 0 auto 38px;
+
+        @media (max-width: 768px) {
+            max-width: 180px;
+        }
+
     }
 
     .title--small {
@@ -34,21 +57,28 @@
         }
     }
 
-    .hero_content_combos {
+    .hero__content__combos {
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: 768px) {
+            display: block;
+        }
 
-     .hero_content_combos_combo {
+       .hero__content__combos__combo {
         width: calc(50% - 12px);
+
+
+        @media (max-width: 768px) {
+            width: 100%;
+            margin-bottom: 24px;
+        }
 
         img {
             max-width: 120px;
         }
 
-
      }
 
     }
-
 }
